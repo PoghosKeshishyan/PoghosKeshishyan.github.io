@@ -1,0 +1,573 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@500;600;800&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sylfaen';
+    font-weight: bold;
+    transition: .1s all linear;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    color: white;
+    font-size: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* _____________left_____________*/
+.menuBar{
+    display: none;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 5px 0;
+    width: 50px;
+}
+
+.levelForMobile{
+    display: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Consolas';
+}
+
+#left {
+    text-align: center;
+    width: 80%;
+}
+
+#start_time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#startGame {
+    margin: 55px;
+    padding: 10px 50px;
+    font-size: 30px;
+    font-family: 'Consolas';
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#startGame:hover {
+    background-color: #56cb03a9;
+}
+
+#timeGame {
+    display: none;
+    /* width: 220px; */
+    margin: 55px 20px;
+    padding: 10px;
+    font-family: 'Consolas';
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: black;
+}
+
+#minuteTime, #secondTime {
+    font-family: 'Consolas';
+}
+
+#newGame {
+    display: none;
+    margin: 55px 20px;
+    padding: 10px 50px;
+    font-family: 'Consolas';
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#newGame:hover {
+    background-color: #ffff0080;
+}
+
+#newGame:focus {
+    background-color: darkgoldenrod;
+}
+
+/* _____________end game _____________ */
+#endGame {
+    display: none;
+    width: 500px; 
+    height: 110.8px;
+    margin: 0 auto;
+    padding: 35px;
+    text-align: center;
+    font-size: 1.7rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: lightseagreen;
+}
+
+/* _____________helps table_____________ */
+#helps_table_call {
+    display: none;    
+    position: absolute;
+    top: 90px; right: 1%;
+    width: 280px;
+    padding: 25px 0px; 
+    line-height: 35px;
+    color: black;
+    background-image: repeating-linear-gradient(lightslategray, white, rgb(69, 102, 146));
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+#helps_table_audience {
+    display: none;    
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: absolute;
+    bottom: -80px; right: 1%;
+    width: 270px;
+    height: 220px;
+    padding: 10px 0px; 
+    line-height: 35px;
+    color: black;
+    background-image: repeating-linear-gradient(lightslategray, white, rgb(69, 102, 146));
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+#helps_table_audience #forA, #forB, #forC, #forD {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    height: 100%;
+}
+
+#helps_table_audience .title {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+}
+
+#helps_table_audience span {
+    font-family: 'Consolas';   
+    font-weight: bold; 
+}
+
+#helps_table_audience .diagram {
+    width: 70%;
+    margin: 0 auto;
+    background-image: repeating-linear-gradient(rgb(45, 47, 49), rgb(159, 141, 141), rgb(25, 49, 81));
+}
+
+
+/* _____________helps_____________ */
+#help {
+    display: flex;
+    justify-content: center;
+}
+
+#help div {
+    margin: 20px;
+    transition: .2s all linear;
+    cursor: pointer;
+}
+
+#help div img {
+    width: 100%;
+}
+
+#help div.used {
+    opacity: .4;
+    cursor: default;
+}
+
+/* _____________question_____________ */
+#question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0 60px;
+    width: 88%;
+    height: 100px;
+    padding: 0 60px;
+    line-height: 40px;
+    font-size: 1.6rem;
+    background-color: black;
+    border: solid 2px white;
+    border-radius: 30px;
+}
+
+#answers { 
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#answers div {
+    width: 45%;
+    margin: 5px;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;  
+    background-color: black;
+    border: solid 2px white;
+    border-radius: 30px;
+}
+
+#answers > div::before {
+    padding-right: 25px;
+    font-family: 'Consolas';
+    font-weight: bold;
+    color: yellow;
+}
+
+#answers > div:nth-child(1)::before {
+    content: "Ա";
+}
+
+#answers > div:nth-child(2)::before {
+    content: "Բ";
+}
+
+#answers > div:nth-child(3)::before {
+    content: "Գ";
+}
+
+#answers > div:nth-child(4)::before {
+    content: "Դ";
+}
+
+/* _____________right_____________*/
+.levelDiv {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: black;
+}
+
+#right div {
+    width: 80%;
+    padding: 3px 0;
+    font-family: 'Arial';
+    text-align: center;
+    border-radius: 30px;
+}
+
+.active {
+    background-color: #ffff0080;
+}
+
+#right span {
+    font-family: 'Arial';
+    color: rgb(226, 226, 5);
+}
+
+
+/* .........media......... */
+@media (max-width: 800px) {
+    body{
+        height: 91vh;
+    }
+
+    .titleH1{
+        margin-top: 12%;
+        font-size: 30px;
+        font-family: 'Noto Serif Armenian', serif;
+    }
+
+    #startGame {
+        margin: 30px;
+        padding: 5px 40px;
+        font-size: 20px;
+        font-style: normal;
+        font-family: 'Noto Serif Armenian', serif;
+    }
+
+    #newGame {
+        margin: 30px 5px;
+        padding: 5px 20px;
+        font-size: 20px;
+    }
+
+    #timeGame {
+        margin: 5px;
+        padding: 5px 20px;
+        font-size: 20px;
+        font-style: normal;
+    }
+
+    /* _____________helps_____________ */
+    #help {
+        display: flex;
+        justify-content: center;
+    }
+
+    #help div {
+        transform: scale(1.9);
+    }
+
+    /* _____________question_____________ */
+    #question {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 115%;
+        margin: 0 auto 0 -7.5%;
+        padding: 10px;
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 22px;
+        background-color: rgb(0, 0, 0);
+        border: solid 2px white;
+        border-radius: 30px;
+    }
+
+    #answers { 
+        width: 120%;
+        margin: 10px auto 0 -9.5%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #answers div {
+        width: 45%;
+        padding: 10px;
+        font-size: .8rem;
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 600;
+        background-color: black;
+        border: solid 2px white;
+        border-radius: 30px;
+    }
+
+    #answers > div::before {
+        padding-right: 10px;
+        font-weight: bold;
+        color: yellow;
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 600;
+    }
+
+    #answers > div:nth-child(1)::before {
+        content: "Ա.";
+    } 
+
+    #answers > div:nth-child(2)::before {
+        content: "Բ.";
+    }
+
+    #answers > div:nth-child(3)::before {
+        content: "Գ.";
+    }
+
+    #answers > div:nth-child(4)::before {
+        content: "Դ.";
+    }
+    
+    /* _____________end game_____________ */         
+    #endGame {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        height: 10%;
+        margin: -10px auto 10px auto;
+        font-size: 1rem;
+        border: 2px solid white;
+        border-radius: 20px;
+        background-color: lightseagreen;
+    }
+
+    #endGame span {
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 600;
+    }
+
+    /* _____________helps table_____________ */
+    #helps_table_call {
+        display: none;    
+        position: absolute;
+        z-index: 1000;
+        top: -110px; 
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 600;
+    }
+
+    #helps_table_audience {
+        display: none;    
+        justify-content: space-evenly;
+        align-items: flex-end;
+        position: absolute;
+        z-index: 1000;
+        top: -120px; left: calc(3%);
+    }
+
+    #helps_table_audience #forA, #forB, #forC, #forD {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60px;
+        height: 100%;
+    }
+
+    #helps_table_audience .title {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #helps_table_audience span {
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 600;
+    }
+
+    #helps_table_audience .diagram {
+        width: 70%;
+        margin: 0 auto;
+        background-image: repeating-linear-gradient(rgb(45, 47, 49), rgb(159, 141, 141), rgb(25, 49, 81));
+    }
+
+    .menuBar{
+        display: block;
+        position: absolute;
+        font-size: 1.5rem;
+        top: 20px; right: 20px;
+    }
+
+    .levelForMobile {
+        display: none;
+        position: absolute;
+        top: 19px; left: 10px;
+        width: 75%;
+        height: 45px;
+        line-height: 40px;
+        padding: 3px 0;
+        background-color: black;
+        text-align: center;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-family: 'Noto Serif Armenian', serif;
+        font-weight: 700;
+    }
+
+    /* _____________right_____________*/
+    .levelDiv {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 45%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid white;
+        border-radius: 30px;
+        background-color: black;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .actRig{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    #right div {
+        width: 100%;
+        padding: 4px;
+        font-size: 1rem;
+        font-family: 'Arial';
+        text-align: center;
+        border-radius: 30px;
+    }
+}
+
+@media (min-width: 600px) {
+    body{
+        height: 89.8vh;
+    }
+
+    .levelForMobile {
+        left: 40px;
+    }
+
+    .levelDiv {
+        width: 30%;
+    }
+
+    #question {
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+
+    #answers div {
+        font-size: 1rem;
+    }
+
+    #endGame span {
+        font-size: 1.5rem;
+    }
+
+    .actRig{
+        display: block;
+    }
+
+    #help div {
+        transform: scale(1.2);
+    }
+
+    #helps_table_call {
+        top: -200%;
+        left: calc(50% - 140px); 
+    }
+
+    #helps_table_audience {
+        height: 180%;
+        top: -220px; 
+        left: calc(50% - 135px);
+    }
+}
